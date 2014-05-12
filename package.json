@@ -1,0 +1,31 @@
+{
+  "name": "formulas",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "formulas": "./bin/formulas"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:open-node/formulas.git"
+  },
+  "keywords": [
+    "formulas",
+    "math",
+    "mutil"
+  ],
+  "author": "Redstone Zhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-node/formulas/issues"
+  },
+  "homepage": "https://github.com/open-node/formulas",
+  "dependencies": {
+    "commander": "~2.2.0",
+    "underscore": "~1.6.0"
+  }
+}

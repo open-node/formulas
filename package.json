@@ -1,8 +1,8 @@
 {
   "name": "formulas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/formulas.js",
   "bin": {
     "formulas": "./bin/formulas"
   },

@@ -2,13 +2,23 @@
 
 var params    = require('commander')
   , _         = require('underscore')
+  , Table     = require('cli-table')
   , formulas  = require('../lib/formulas');
 
 params
   .version('0.0.1')
   .option('-c, --count [type]',       '输入一个数字，用来生成乘法表的最大范围，默认为 9')
   .option('-o, --operate [type]',     '计算方式，默认为乘法 *, 也可以设置为 +')
+  .option('-f, --format [type]',      '输出的格式，默认为普通的格式，可以试试看table')
   .parse(process.argv)
 
-console.log(_.map(formulas(params), function(line) { return line.join('\t'); }).join('\n'));
+var ret = formulas(params);
+
+if(params.format === 'table') {
+  var table = new Table();
+  table.push.apply(table, ret);
+  console.log(table.toString());
+} else {
+  console.log(_.map(ret, function(line) { return line.join('\t'); }).join('\n'));
+}
 
